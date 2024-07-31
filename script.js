@@ -83,16 +83,16 @@ $(document).ready(()=>{
             // Using Extracted Value to Genrate new Object
             new Contact(contact_name,phno1,phno2,emailID,instaID,fbID,github,adress,dob,gender);
             //Resetting input box
-            // $("#name").val("");//Resetting input box
-            // $("#phno1").val("");
-            // $("#phno2").val("");
-            // $("#emailID").val("");
-            // $("#instaID").val("");
-            // $("#fbID").val("");
-            // $("#github").val("");
-            // $("#adress").val("");
-            // $("#dob").val("");
-            // $("#gender").val("");
+            $("#name").val("");
+            $("#phno1").val("");
+            $("#phno2").val("");
+            $("#emailID").val("");
+            $("#instaID").val("");
+            $("#fbID").val("");
+            $("#github").val("");
+            $("#adress").val("");
+            $("#dob").val("");
+            $("#gender").val("");
         }}
     )
 })
