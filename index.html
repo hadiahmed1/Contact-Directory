@@ -4,47 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Book</title>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 </head>
 <body>
-    <div class="search-bar">
-        <input type="text" id="search" placeholder="Search...">
-        <button id="search-btn">Search</button>
-        <div class="search-result">
+    <header>
+        <div id="logo">
+            Travel Goals
         </div>
-    </div>
-    <div class="contact-list">
-        <h1>Contact List</h1>
-        <div class="contactCard"><div class="contact_name">Name: Sam</div>
-            <div class="phno1">Phone Number1:12345</div>
-            <div class="phno2">Phone Number2:45678</div>
-            <div class="emailID">Email ID:sam@gmail.com</div>
-            <div class="instaID">Instagram:sam_123</div>
-            <div class="fbID">Face Book:sam_fb</div>
-            <div class="github">Github:sam_dev</div>
-            <div class="adress">Adress:123 street,kolkata700012</div>
-            <div class="dob">DOB:Male</div>
-            <div class="gender">Gender:undefined</div>
+        <nav>
+            <ul>
+                <li><a href="">Destination</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="hero">
+            <h1>Joe's Travel Page</h1>
+            <p>Let's Explore the World Together</p>
+            <a href="">
+                Discover Places
+            </a>
         </div>
+    </main>
+    <div id="highlights">
+        <h2>Highlights</h2>
+        <ul id="destinations">
+            <li>
+                <img src="./images/barcelona.jpg" alt="">
+                <p>Barcelona <strong>Spain</strong></p>
+            </li>
+            <li>
+                <img src="./images/miami.jpg" alt="">
+                <p>miami <strong>USA</strong></p>
+            </li>
+            <li>
+                <img src="./images/new-york-city.jpg" alt="">
+                <p>new-york-city <strong>UK</strong></p>
+            </li>
+        </ul>
     </div>
-    <div class="">
-        <form action="#">
-            <input type="text" id="name" placeholder="Enter Name">
-            <input type="text" id="phno1" placeholder="Enter Phone Number1">
-            <input type="text" id="phno2" placeholder="Enter Phone Number2">
-            <input type="text" id="emailID" placeholder="Enter Email ID">
-            <input type="text" id="instaID" placeholder="Enter Instagram ID">
-            <input type="text" id="fbID" placeholder="Enter Face Book ID">
-            <input type="text" id="github" placeholder="Enter Github ID">
-            <input type="text" id="adress" placeholder="Enter Adress">
-            <input type="text" id="dob" placeholder="Enter DOB">
-            <input type="text" id="gender" placeholder="Enter Gender">
-            <button id="submit">Add Contact</button>
-        </form>
-    </div>
-    <script src="script.js"></script>
+    <footer>
+        <img src="./images/insta.png" alt="">
+        <img src="./images/facebook.png" alt="">
+    </footer>
 </body>
 </html>
