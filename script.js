@@ -91,7 +91,9 @@ $(document).ready(()=>{
     });
     $("#discover").on({
         "click":function(){
-            addSearchBar($(this).parent());
+            if (!$(this).parent().find('.search_bar').length) {
+                addSearchBar($(this).parent());
+            }
         }
     });
     $("strong").on({
