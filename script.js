@@ -58,8 +58,6 @@ const addAgency=(agency,container)=>{//function to add new contact to said Conta
     appendDiv("city","City:"+agency.city,card);
     $(container).append(card);
 }
-function resetForm() {
-}
 function addSearchBar(parent){
     let search_bar=document.createElement("div");
     search_bar.className="search_bar";
@@ -82,12 +80,17 @@ $(document).ready(()=>{
     //Search
     $("#hero").on("click", "#search-btn", function(){
         $(".search-result").children().remove();
+        let count=0;
         agency_list.forEach(agency => {
             console.log(agency.agency_list);
             if(agency.city.toLowerCase().includes($("#search").val().toLowerCase())){
                 addAgency(agency,".search-result");
+                count++;
             }
         });
+        if(count==0){
+            $(this).parent().append(`<h3>Sorry No Result found</h3>`);
+        }
     });
     $("#discover").on({
         "click":function(){
