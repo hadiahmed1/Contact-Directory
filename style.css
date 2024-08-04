@@ -33,8 +33,20 @@ header ul li a{
     color: #fffb00;
     text-decoration: none;
 }
-
-
+@media screen and (max-width:600px) {
+    header{
+        flex-direction: column;
+    }
+    header #logo{
+        font-size: 40px;
+    }
+    header ul{
+        padding-inline-start: 20px;
+    }
+    header ul li a{
+        padding: 10px;
+    }
+}
 main{
     margin-top: 0;
     height: 100vh;
@@ -56,8 +68,13 @@ main{
     padding: 50px 0;
     margin: 0 auto;
 }
+@media screen and (max-width:600px) {
+    #hero{
+        margin-top: 150px;
+    }
+}
 #hero h1{
-    font: 64px Raleway;
+    font: 48px Raleway;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -67,7 +84,7 @@ main{
     margin: 24px 0 32px;
     font-weight: lighter;
 }
-#hero a{
+#hero #discover{
     font: 30px Quicksand;
     text-decoration: none;
     background-color: rgb(255, 251, 0);
@@ -91,22 +108,28 @@ main{
     font-weight: 900;
 }
 #destinations {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     width: 90%;
     margin: auto;
     margin-bottom: 40px;
     list-style: none;
 }
-#destinations ul{
-    display: flex;
-    justify-content: space-between;
+@media screen and (max-width:1000px) {
+    #destinations{
+        grid-template-columns: 1fr 1fr;
+    }
 }
-
+@media screen and (max-width:600px) {
+    #destinations{
+        grid-template-columns: 1fr;
+    }
+}
 #destinations li {
     margin: 0 20px;
     text-transform: uppercase;
-    width: 25%;
+    width: 90%;
     text-align: center;
 }
 #destinations li img{

@@ -8,52 +8,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <header>
-        <div id="logo">
-            Travel Goals
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Destination</a></li>
-                <li><a href="">About</a></li>
+    <div class="container">
+        <header>
+            <div id="logo">
+                Travel Goals
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Destination</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="hero">
+                <h1>Where Would You Like to Go?</h1>
+                <p>Let's Explore the World Together</p>
+                <button id="discover">
+                    Discover Places
+                </button>
+            </div>
+        </main>
+        <div id="highlights">
+            <h2>Popular Destinations</h2>
+            <ul id="destinations">
+                <li>
+                    <img src="./images/places/barcelona.jpg" alt="">
+                    <p>Spain <strong>Barcelona</strong></p>
+                    <div class="agency-list"></div>
+                </li>
+                <li>
+                    <img src="./images/places/miami.jpg" alt="">
+                    <p>USA <strong>New York</strong></p>
+                    <div class="agency-list"></div>
+                </li>
+                <li>
+                    <img src="./images/places/london.jpg" alt="">
+                    <p>UK <strong>London</strong></p>
+                    <div class="agency-list"></div>
+                </li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="hero">
-            <h1>Joe's Travel Page</h1>
-            <p>Let's Explore the World Together</p>
-            <a href="">
-                Discover Places
-            </a>
         </div>
-    </main>
-    <div id="highlights">
-        <h2>Highlights</h2>
-        <ul id="destinations">
-            <li>
-                <img src="./images/barcelona.jpg" alt="">
-                <p>Spain <strong>Barcelona</strong></p>
-                <div class="agency-list"></div>
-            </li>
-            <li>
-                <img src="./images/miami.jpg" alt="">
-                <p>USA <strong>New York</strong></p>
-                <div class="agency-list"></div>
-            </li>
-            <li>
-                <img src="./images/new-york-city.jpg" alt="">
-                <p>UK <strong>London</strong></p>
-                <div class="agency-list"></div>
-            </li>
-        </ul>
+        <footer>
+            <img src="./images/insta.png" alt="">
+            <img src="./images/facebook.png" alt="">
+        </footer>
     </div>
-    <footer>
-        <img src="./images/insta.png" alt="">
-        <img src="./images/facebook.png" alt="">
-    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
