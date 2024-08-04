@@ -99,16 +99,20 @@ $(document).ready(()=>{
             }
         }
     });
-    $("strong").on({
-        "click":function(){
-            let container=$(this).parent().siblings('.agency-list');
-            console.log($(this).text());
+    $("#destinations").on(
+        "click","li",function(){
+            let container=$(this).children(".agency-list");
             $(".agency-list").children().remove();
+            let count=0;
             agency_list.forEach(agency => {
-                if(agency.city.toLowerCase().includes($(this).text().toLowerCase())){
+                if(agency.city.toLowerCase().includes($(this).children("p").children("strong").text().toLowerCase())){
                     addAgency(agency,container);
+                    count++;
                 }
             });
+            if(count==0){
+                $(container).append(`<h3>Sorry No Result found</h3>`);
+            }
         }
-    })
+    )
 })
