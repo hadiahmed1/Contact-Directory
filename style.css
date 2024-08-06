@@ -244,7 +244,15 @@ main{
     height: 250px;
     overflow: auto;
   }
-  
+  .agency-list{
+    height: 230px;
+    overflow: auto;
+    margin-top: -22px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   /* Individual contact card */
   .contactCard {
     background-color: white;
@@ -255,8 +263,9 @@ main{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     width: 250px;
     flex-grow: 1;
-    max-width: calc(33.333% - 20px);
-  }
+    max-width: 90%;
+    text-align: left;
+}
   
   .contactCard div {
     margin-bottom: 5px;
