@@ -62,31 +62,23 @@ main{
 }
 #hero{
     width: 1050px;
-    background-color: rgba(51, 47, 47, 0.8);
-    box-shadow: 2px 4px 8px rgb(68, 67, 67);
-    border-radius: 8px;
     text-align: center;
     padding: 50px 0;
     margin: 0 auto;
     margin-top: 150px;
-}
-@media screen and (max-width:600px) {
-    #hero{
-        margin-top: 150px;
-    }
-}
+}  
 #hero h1{
     font: 48px Raleway;
-    color: #ffffff;
+    color:black;
     text-transform: uppercase;
 }
 #hero p{
     font: 36px Quicksand;
-    color: #ffffff;
+    color: black;
     margin: 24px 0 32px;
-    font-weight: lighter;
-}
-#hero #discover{
+    font-weight:normal;
+  }
+  #hero #discover{
     font: 30px Quicksand;
     text-decoration: none;
     background-color: rgb(255, 251, 0);
@@ -95,21 +87,53 @@ main{
     font-weight: bold;
     border-radius: 8px;
     box-shadow: 2px 4px 8px rgb(68, 67, 67);
-}
-
-#highlights {
+  }
+  @media screen and (max-width:840px) {
+    #hero{
+        margin-top: 180px;
+        padding-top: 10px;
+    }
+    header{
+        padding: 0px;
+        align-items: center;
+    }
+    header #logo{
+        font-size: 42px;
+    }
+    #hero h1{
+        font-size: 38px;
+    }
+  }
+  @media screen and (max-width:600px) {
+    
+      #hero h1{
+        font: 36px Raleway;
+        padding: 5px;
+      }
+      #hero p{
+        font: 24px Quicksand;
+        margin: 18px 0 28px;
+      }
+      #hero #discover{
+        font: 22px Quicksand;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 2px 4px 8px rgb(68, 67, 67);
+      }
+  }
+  #highlights {
     padding: 24px;
     background: linear-gradient(0deg, rgb(227, 255, 253), rgb(202, 243, 240));
-}
-#highlights h2{
+  }
+  #highlights h2{
     text-align: center;
     margin: 24px 0px;
     font: 50px Quicksand;
     text-transform: uppercase;
     color:rgb(59, 65, 64);;
     font-weight: 900;
-}
-#destinations {
+  }
+  #destinations {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -117,56 +141,156 @@ main{
     margin: auto;
     margin-bottom: 40px;
     list-style: none;
-}
-@media screen and (max-width:1200px) {
+  }
+  @media screen and (max-width:1200px) {
     #destinations{
         grid-template-columns: 1fr 1fr;
     }
-}
-@media screen and (max-width:800px) {
+  }
+  @media screen and (max-width:800px) {
     #destinations{
         grid-template-columns: 1fr;
     }
-}
-#destinations li {
+    #highlights h2{
+        font-size: 36px;
+    }
+  }
+  #destinations li {
     margin: 0 20px;
     text-transform: uppercase;
     width: 90%;
     text-align: center;
-}
-#destinations li img{
+  }
+  #destinations li img{
     height: 250px;
     width: 100%;
-    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    box-shadow: 2px 4px 8px rgb(118, 51, 51);
     border-radius: 10px;
     object-fit: cover;
-}
-#destinations p{
+  }
+  #destinations p{
     margin: 20px 0px;
     font: 26px Quicksand;
     color: #7c7b7b;
-}
-strong{
+  }
+  strong{
     color: rgb(0, 160, 117);
-}
-
-footer {
+  }
+  
+  footer {
     background: linear-gradient(70deg, rgb(24, 24,24), rgb(25, 29, 29));
     padding: 36px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-footer img{
+  }
+  footer img{
     height: 100px;
     width: 100px;
     padding:0px 50px;
-}
-
-
-.contactCard{
-    border: 3px solid black;
-    padding: 10px;
-    margin: 5px;
-}
+  }
+  
+  
+  /* Search bar container */
+  .search_bar {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search input */
+  #search {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Search button */
+  #search-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Search results container */
+  .search-result {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgb(240, 240, 240,0.01);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 250px;
+    overflow: auto;
+  }
+  
+  /* Individual contact card */
+  .contactCard {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    flex-grow: 1;
+    max-width: calc(33.333% - 20px);
+  }
+  
+  .contactCard div {
+    margin-bottom: 5px;
+  }
+  
+  .contactCard .name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* No results message */
+  .search-result h3 {
+    color: #888;
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    .contactCard {
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .contactCard {
+      max-width: 100%;
+      padding: 0;
+    }
+    .search-result {
+        height: 210px;
+        padding: 0px;
+        margin: 10px auto;
+    }
+  }

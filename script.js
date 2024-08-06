@@ -58,47 +58,72 @@ const addAgency=(agency,container)=>{//function to add new contact to said Conta
     appendDiv("city","City:"+agency.city,card);
     $(container).append(card);
 }
-function addSearchBar(parent){
+/*function addSearchBar(parent){
     let search_bar=document.createElement("div");
     search_bar.className="search_bar";
-    search_bar.innerHTML=`<input type="text" id="search" placeholder="Search..."><button id="search-btn">Search</button><div class="search-result"></div>`;
+    search_bar.innerHTML=<input type="text" id="search" placeholder="Search..."><button id="search-btn">Search</button><div class="search-result"></div>;
     $(parent).append(search_bar);
+}*/
+// ... (previous code remains the same)
+
+function addSearchBar(parent) {
+    let search_container = document.createElement("div");
+    search_container.className = "search-container";
+    
+    let search_bar = document.createElement("div");
+    search_bar.className = "search_bar";
+    search_bar.innerHTML =` <input type="text" id="search" placeholder="Search..."><button id="search-btn">Search</button></input>`;
+    
+    let search_result = document.createElement("div");
+    search_result.className = "search-result";
+    
+    search_container.appendChild(search_bar);
+    search_container.appendChild(search_result);
+    $(parent).append(search_container);
 }
 //Adding Random Contacts for Testing Purposes
-new Agency("bcd",1234,"","","","USA","miamai");
-new Agency("cde",1234,"","","","USA","new york");
-new Agency("abc",1234,"","","","USA","new york");
-new Agency("def",1234,"","","","USA","new york");
+new Agency("YOTEL Miami",+17867855700,"","","227 NE 2nd St, Miami, FL 33132, United States","USA","miami");
+new Agency("Posh Hostel South Beach",+13056748821,"","","820 Collins Ave, Miami Beach, FL 33139, United States","USA","miami");
+new Agency("Novotel Miami Brickell",+17866002600,"","","1500 SW 1st Ave, Miami, FL 33129, United States","USA","miami");
+new Agency("Equinox Hotel New York",+12128129200,"","","33 Hudson Yards, New York, NY 10001, United States","USA","new york");
+new Agency("Harmony Suites Secaucus Meadowlands",+12013813000,"","","455 Plaza Dr, Secaucus, NJ 07094, United States","USA","new york");
+new Agency("HI New York City Hostel",+12129322300,"","","891 Amsterdam Ave, New York, NY 10025, United States6","USA","new york");
 new Agency("efg",1234,"","","","UK","London");
-new Agency("ghi",1234,"","","","Japan","Tokyo");
 new Agency("hij",1234,"","","","UK","London");
 new Agency("ijk",1234,"","","","UK","London");
+new Agency("ghi",1234,"","","","Japan","Tokyo");
+new Agency("ghi",1234,"","","","Japan","Tokyo");
+new Agency("ghi",1234,"","","","Japan","Tokyo");
 new Agency("ijk",1234,"","","","Spain","Barcelona");
 new Agency("jkl",1234,"","","","Spain","Barcelona");
+new Agency("jkl",1234,"","","","Spain","Barcelona");
 
-$(document).ready(()=>{
+// ... (Agency creation code remains the same)
+
+$(document).ready(() => {
     //Search
-    $("#hero").on("click", "#search-btn", function(){
+    $("#hero").on("click", "#search-btn", function() {
         $(".search-result").children().remove();
-        let count=0;
+        let count = 0;
         agency_list.forEach(agency => {
-            console.log(agency.agency_list);
-            if(agency.city.toLowerCase().includes($("#search").val().toLowerCase())){
-                addAgency(agency,".search-result");
+            if (agency.city.toLowerCase().includes($("#search").val().toLowerCase())) {
+                addAgency(agency, ".search-result");
                 count++;
             }
         });
-        if(count==0){
-            $(this).parent().append(`<h3>Sorry No Result found</h3>`);
+        if (count == 0) {
+            $(".search-result").append(`<h3>Sorry No Result found</h3>`);
         }
     });
+
     $("#discover").on({
-        "click":function(){
-            if (!$(this).parent().find('.search_bar').length) {
+        "click": function() {
+            if (!$(this).parent().find('.search-container').length) {
                 addSearchBar($(this).parent());
             }
         }
     });
+
     $("#destinations").on(
         "click","li",function(){
             let container=$(this).children(".agency-list");
@@ -115,4 +140,29 @@ $(document).ready(()=>{
             }
         }
     )
-})
+
+});
+
+/*$(document).ready(()=>{
+    //Search
+    $("#hero").on("click", "#search-btn", function(){
+        $(".search-result").children().remove();
+        let count=0;
+        agency_list.forEach(agency => {
+            console.log(agency.agency_list);
+            if(agency.city.toLowerCase().includes($("#search").val().toLowerCase())){
+                addAgency(agency,".search-result");
+                count++;
+            }
+        });
+        if(count==0){
+            $(this).parent().append(<h3>Sorry No Result found</h3>);
+        }
+    });
+    $("#discover").on({
+        "click":function(){
+            if (!$(this).parent().find('.search_bar').length) {
+                addSearchBar($(this).parent());
+            }
+        }
+    });*/
