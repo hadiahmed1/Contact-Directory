@@ -216,8 +216,8 @@ main{
   
   /* Search button */
   #search-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(255, 251, 0);
+    color: Black;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -227,7 +227,7 @@ main{
   }
   
   #search-btn:hover {
-    background-color: #45a049;
+    background-color: rgba(235, 231, 11, 0.856);
   }
   
   /* Search results container */
@@ -241,32 +241,33 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 250px;
+    height: 265px;
     overflow: auto;
   }
   
   /* Individual contact card */
   .contactCard {
-    background-color: white;
-    border: 1px solid #e0e0e0;
+    background: linear-gradient(0deg, rgb(227, 255, 253), rgb(202, 243, 240));
+    /* border: 5px solid rgb(123,123,123);
+     */
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 10px 10px rgb(0,160,120,0.75);
     width: 250px;
     flex-grow: 1;
     max-width: 90%;
     text-align: left;
+
 }
   
   .contactCard div {
     margin-bottom: 5px;
   }
   
-  .contactCard .name {
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
+  .contactCard div {
+    font: 22px Quicksand;
+    color: #535252;
   }
   
   /* No results message */
@@ -294,4 +295,9 @@ main{
         padding: 0px;
         margin: 10px auto;
     }
+  }
+  .agency-list{
+    max-height: 300px;
+    overflow: auto;
+    align-items:center
   }

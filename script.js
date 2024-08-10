@@ -49,23 +49,15 @@ new Destination("Miami","USA","./images/places/miami.jpg")
 const addAgency=(agency,container)=>{//function to add new contact to said Container
     let card=document.createElement("div");//creating contact card
     card.className="contactCard";
-    appendDiv("name","Name:"+agency.agency_name,card);
-    appendDiv("phno1","Phone Number:"+agency.phno,card);
-    appendDiv("email","Email ID:"+agency.emailID,card);
-    appendDiv("insta","Instagram ID:"+agency.instaID,card);
-    appendDiv("adress","Address:"+agency.adress,card);
-    appendDiv("country","Country:"+agency.country,card);
-    appendDiv("city","City:"+agency.city,card);
+    appendDiv("name","<strong>Name:</strong>"+agency.agency_name,card);
+    appendDiv("phno1","<strong>Phone Number:</strong>"+agency.phno,card);
+    appendDiv("email","<strong>Email ID:</strong>"+agency.emailID,card);
+    appendDiv("insta","<strong>Instagram ID:</strong>"+agency.instaID,card);
+    appendDiv("adress","<strong>Address:</strong>"+agency.adress,card);
+    appendDiv("country","<strong>Country</strong>:"+agency.country,card);
+    appendDiv("city","<strong>City:</strong>"+agency.city,card);
     $(container).append(card);
 }
-/*function addSearchBar(parent){
-    let search_bar=document.createElement("div");
-    search_bar.className="search_bar";
-    search_bar.innerHTML=<input type="text" id="search" placeholder="Search..."><button id="search-btn">Search</button><div class="search-result"></div>;
-    $(parent).append(search_bar);
-}*/
-// ... (previous code remains the same)
-
 function addSearchBar(parent) {
     let search_container = document.createElement("div");
     search_container.className = "search-container";
@@ -142,27 +134,3 @@ $(document).ready(() => {
     )
 
 });
-
-/*$(document).ready(()=>{
-    //Search
-    $("#hero").on("click", "#search-btn", function(){
-        $(".search-result").children().remove();
-        let count=0;
-        agency_list.forEach(agency => {
-            console.log(agency.agency_list);
-            if(agency.city.toLowerCase().includes($("#search").val().toLowerCase())){
-                addAgency(agency,".search-result");
-                count++;
-            }
-        });
-        if(count==0){
-            $(this).parent().append(<h3>Sorry No Result found</h3>);
-        }
-    });
-    $("#discover").on({
-        "click":function(){
-            if (!$(this).parent().find('.search_bar').length) {
-                addSearchBar($(this).parent());
-            }
-        }
-    });*/
